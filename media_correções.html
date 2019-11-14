@@ -1,0 +1,148 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+
+<body>
+</body>
+
+
+
+<script>
+    var n1 = parseInt(prompt("Digite a primeira nota"));
+    var n2 = parseInt(prompt("Digite a segunda nota"));
+    var n3 = parseInt(prompt("Digite a terceira nota"));
+    var n4 = parseInt(prompt("Digite a quarta nota"));
+    var peso1 = 3;
+    var peso2 = 2;
+    
+function calcula (n1, n2, n3, n4, peso1, peso2) {
+    
+    if (checarlength(n1, n2, n3, n4, peso1, peso2)){
+
+        if (Number.isInteger(n1 && n2 && n3 && n4 && peso1 && peso2)) {    
+
+            if(checarNum(n1, n2, n3, n4)){
+                var nf = ((n1* peso1 + n2 * peso1) + (n3 * peso2 + n4 * peso2)) / (peso1 + peso1 + peso2 + peso2);
+            }else {        
+                alert("NÃO DIGITE CARACTERES ESPECIAIS COM NÚMEROS AQUI!");                   
+            }
+            return nf;
+        } else {
+            alert("Por favor digite só numeros")              
+        }
+    } else {
+        alert("Por favor digite só numeros até 10!"); 
+    };
+}
+        function checarlength (n1, n2, n3, n4, peso1, peso) {
+            if ((n1 >10 || n2 >10 || n3 >10 || n4 >10) ) {
+                
+                return false; 
+            }
+            else {
+                return true;
+            }   
+        }
+
+        function checarNum(n1,n2,n3,n4){ 
+            if (isNaN(n1 || n2 || n3 || n4)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+ 
+
+    console.log(calcula(n1, n2, n3, n4, peso1, peso2));
+ 
+
+</script>
+
+
+<!--
+*teste1 
+primeira nota 2, segunda nota 2, terceira nota 2, quarta nota S 
+saida nAn
+
+Plano de Solução – No parâmetro da condição o erro foi corrigido pela troca das virgulas entre as variáveis dentro do isInteger() por um &&.
+
+
+
+*teste2
+ nota 1, segunda nota 2, terceira nota a, quarta nota 3 
+saida nAn
+
+
+Plano de Solução – No parâmetro da condição o erro foi corrigido pela troca das virgulas entre as variáveis dentro do isInteger() por um &&.
+
+
+*teste3
+ nota 1, segunda nota a, terceira nota a, quarta nota a 
+saida nAn
+
+
+Plano de Solução – No parâmetro da condição o erro foi corrigido pela troca das virgulas entre as 
+variáveis dentro do isInteger() por um &&. 
+
+*teste4
+
+primeira nota 100000000000000000000000000000000000000000000000000000000000, segunda nota 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, terceira nota 900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, quarta nota 9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+saida 2.7e+210
+
+
+Plano de Solução – Utilizamos uma Function chegarlengh que tem uma condição com If que valida se os inputs são maiores que 10, se for. Da um alert.
+
+
+*teste 5
+primeira nota 8/8 segunda nota 8/8 terceira nota 8/8 quarta nota 8/8
+saida 8
+
+
+Plano de Solução - Utilizamos uma Function chegarnum que tem uma condição com If isNaN(n1 or n2 or n3 or n4) 
+para solucionar todos os erros. Logo quando não for digitado um numero “Digite só números” ou “Não digite caracteres especiais aqui” para quando existirem caracteres especial.
+
+
+
+*teste 6
+primeira nota 1 segunda nota " terceira nota 3 quarta nota 1
+saida nAn
+
+
+Plano de Solução - Utilizamos uma Function chegarnum que tem uma condição com If isNaN(n1 or n2 or n3 or n4) 
+para solucionar todos os erros. Logo quando não for digitado um numero “Digite só números” ou “Não digite caracteres especiais aqui” para quando existirem caracteres especial.
+
+
+
+*teste 7
+primeira nota 1*1 segunda nota 5*5 terceira nota ** quarta nota *8
+saida nAn
+
+
+Plano de Solução - Utilizamos uma Function chegarnum que tem uma condição com If isNaN(n1 or n2 or n3 or n4) 
+para solucionar todos os erros. Logo quando não for digitado um numero “Digite só números” ou “Não digite caracteres especiais com numeros aqui” para quando existirem caracteres especial.
+
+
+*teste 8
+primeira nota 3 segunda nota BatataFDk terceira nota LucasKitapartida quarta nota Batatapesadao
+saida nAn
+
+
+Plano de Solução - Utilizamos uma Function chegarnum que tem uma condição com If isNaN(n1 or n2 or n3 or n4) 
+para solucionar todos os erros. Logo quando não for digitado um numero “Digite só números” ou “Não digite caracteres especiais com números aqui” para quando existirem caracteres especial.
+
+
+*teste 9
+primeira nota 1-1 segunda nota 1*1 terceira nota 1+1 quarta nota 1/1
+saida 1
+
+
+*Plano de Solução  - Utilizamos uma Function chegarnum que tem uma condição com If isNaN(n1 or n2 or n3 or n4) 
+para solucionar todos os erros. Logo quando não for digitado um numero “Digite só números” ou “Não digite caracteres especiais com números aqui” para quando existirem caracteres especial.
+
+
+
+-->
+
+</html>
+
